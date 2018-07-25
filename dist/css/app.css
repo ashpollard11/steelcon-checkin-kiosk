@@ -15,6 +15,7 @@ TABLE OF CONTENTS:
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Russo+One");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -75,13 +76,20 @@ html, body {
 }
 
 body {
-	background: url(https://i.kym-cdn.com/entries/icons/facebook/000/015/265/steven.jpg) no-repeat center;
+	background: url(../img/bg.jpg) no-repeat center;
 	background-size: cover;
 	background-blend-mode: multiply;
-	background-color: rgba(0, 0, 0, 0.7);
-	font-family: Helvetica, Arial, sans-serif;
-	border: 3vw solid black;
+	background-color: rgba(0, 0, 0, 0.5);
+	font-family: 'Russo One', sans-serif;
+	letter-spacing: 0.1rem;
 	padding: 3vw;
+	color: #fff;
+}
+
+body, #app, ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 h1 {
@@ -90,14 +98,53 @@ h1 {
 	text-align: center;
 }
 
-h1, h2, h3 {
+blockquote {
+	text-align: center;
+	margin: 20px 0;
+}
+
+#app {
+	width: 100%;
+	flex-direction: column;
+}
+
+#app h2 {
+	font-size: 4vw;
+	margin-bottom: 10px;
+}
+
+#app div {
+	display: flex;
+	flex-flow: column wrap;
+}
+
+#app input {
+	font-size: 15pt;
+}
+
+#app input, #app button {
+	border: none;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 16px;
+	font-size: 18px;
+}
+
+#app button {
+	background: scroll;
 	color: #fff;
+	border: 2px solid;
+	transition: 0.4s ease-in;
+}
+
+#app button:hover {
+	background: rgba(255, 255, 255, 0.8);
+	color: #000;
+	border-color: rgba(255, 255, 255, 0.8);
 }
 
 ul {
-	display: flex;
-	flex-wrap: wrap;
-	align-content: flex-start;
+	flex-flow: row wrap;
 }
 
 ul li {
@@ -106,7 +153,7 @@ ul li {
 	border: 1px solid #999;
 	border-radius: 10px;
 	padding: 10px;
-	margin: 10px 0;
+	margin: 10px;
 }
 
 ul li h3 {
@@ -117,16 +164,6 @@ ul li h3 {
 ul li p {
 	font-size: 12pt;
 	color: #999;
-}
-
-h2 {
-	font-size: 4vw;
-	margin-top: 100px;
-}
-
-input {
-	font-size: 15pt;
-	padding: 5px 8px;
 }
 
 /*# sourceMappingURL=app.css.map */
